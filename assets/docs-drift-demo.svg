@@ -1,0 +1,22 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="760" fill="#F3F5F7"/>
+  <rect x="36" y="32" width="1128" height="696" rx="28" fill="#0B1220"/>
+  <rect x="36" y="32" width="1128" height="696" rx="28" stroke="#1F2937" stroke-width="2"/>
+  <circle cx="86" cy="82" r="8" fill="#FB7185"/>
+  <circle cx="114" cy="82" r="8" fill="#FBBF24"/>
+  <circle cx="142" cy="82" r="8" fill="#34D399"/>
+  <text x="176" y="88" fill="#E5E7EB" font-family="Menlo, Monaco, Consolas, Liberation Mono, monospace" font-size="22">Docs Drift Check</text>
+  <text x="72" y="136" fill="#94A3B8" font-family="Menlo, Monaco, Consolas, Liberation Mono, monospace" font-size="18">$ bash plugins/docs-drift-check/skills/docs-drift-check/scripts/docs_drift_check.sh main</text>
+  <text x="72" y="182" fill="#CBD5E1" font-family="Menlo, Monaco, Consolas, Liberation Mono, monospace" font-size="22">Validation example on Akshaysanthosh/my-portfolio</text>
+  <text x="72" y="226" fill="#64748B" font-family="Menlo, Monaco, Consolas, Liberation Mono, monospace" font-size="18">Base ref: main</text>
+  <text x="72" y="258" fill="#64748B" font-family="Menlo, Monaco, Consolas, Liberation Mono, monospace" font-size="18">Diff range: main...HEAD</text>
+  <text x="72" y="314" fill="#E2E8F0" font-family="Menlo, Monaco, Consolas, Liberation Mono, monospace" font-size="18">== Changed files ==</text>
+  <text x="72" y="346" fill="#38BDF8" font-family="Menlo, Monaco, Consolas, Liberation Mono, monospace" font-size="18">package.json</text>
+  <text x="72" y="402" fill="#E2E8F0" font-family="Menlo, Monaco, Consolas, Liberation Mono, monospace" font-size="18">== Likely CLI flag changes ==</text>
+  <text x="72" y="434" fill="#FCA5A5" font-family="Menlo, Monaco, Consolas, Liberation Mono, monospace" font-size="18">-    "dev": "next dev --turbopack",</text>
+  <text x="72" y="466" fill="#86EFAC" font-family="Menlo, Monaco, Consolas, Liberation Mono, monospace" font-size="18">+    "site:dev": "next dev --turbopack",</text>
+  <text x="72" y="522" fill="#E2E8F0" font-family="Menlo, Monaco, Consolas, Liberation Mono, monospace" font-size="18">== Likely config changes ==</text>
+  <text x="72" y="554" fill="#FCA5A5" font-family="Menlo, Monaco, Consolas, Liberation Mono, monospace" font-size="18">-    "dev": "next dev --turbopack",</text>
+  <text x="72" y="586" fill="#86EFAC" font-family="Menlo, Monaco, Consolas, Liberation Mono, monospace" font-size="18">+    "site:dev": "next dev --turbopack",</text>
+  <text x="72" y="650" fill="#94A3B8" font-family="Menlo, Monaco, Consolas, Liberation Mono, monospace" font-size="18">README impact: the getting-started command is now stale.</text>
+</svg>

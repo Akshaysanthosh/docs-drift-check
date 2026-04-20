@@ -4,6 +4,8 @@
 
 Public repository: [github.com/Akshaysanthosh/docs-drift-check](https://github.com/Akshaysanthosh/docs-drift-check)
 
+![Docs Drift Check terminal demo](assets/docs-drift-demo.svg)
+
 It focuses on high-signal, user-facing changes such as:
 
 - env vars
@@ -29,12 +31,16 @@ It focuses on high-signal, user-facing changes such as:
   agents/openai.yaml
   references/heuristics.md
   scripts/docs_drift_check.sh
+assets/docs-drift-demo.svg
 docs/go-to-market.md
+docs/validation-report.md
+docs/validation/
 plugins/docs-drift-check/
   .codex-plugin/plugin.json
   skills/docs-drift-check/
 scripts/install_local_skill.sh
 scripts/install_local_plugin.sh
+scripts/run_public_validation.sh
 tests/smoke_test.sh
 tests/plugin_smoke_test.sh
 ```
@@ -87,9 +93,20 @@ Run the smoke tests locally:
 ```bash
 bash tests/smoke_test.sh
 bash tests/plugin_smoke_test.sh
+bash scripts/run_public_validation.sh
 ```
 
-The tests create temporary git repos, install either the skill or the plugin, make a docs-sensitive code change, and verify that the helper script reports the expected signals.
+The tests create temporary git repos, install either the skill or the plugin, make docs-sensitive code changes, and verify that the helper script reports the expected signals.
+
+## Public validation
+
+This repo also includes a repeatable validation pass against real public repositories.
+
+- Run it with `bash scripts/run_public_validation.sh`
+- Summary report: [docs/validation-report.md](docs/validation-report.md)
+- Raw outputs: [my-portfolio](docs/validation/my-portfolio.txt), [Relam-homepage](docs/validation/Relam-homepage.txt), [dara-lab](docs/validation/dara-lab.txt)
+
+The validation examples use small, intentional branch changes on real public repos so the output stays reproducible and honest.
 
 ## License
 

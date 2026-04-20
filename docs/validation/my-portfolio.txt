@@ -1,0 +1,31 @@
+Repository: https://github.com/Akshaysanthosh/my-portfolio
+Scenario: Renamed the primary local dev script from npm run dev to npm run site:dev without updating README.
+
+Base ref: main
+Diff range: main...HEAD
+
+== Working tree status ==
+(clean)
+
+== Changed files ==
+package.json
+
+== Changed docs files ==
+(none)
+
+== Potential renames ==
+(none)
+
+== Likely env var changes ==
+(none)
+
+== Likely CLI flag changes ==
+-    "dev": "next dev --turbopack",
++    "site:dev": "next dev --turbopack",
+
+== Likely route or endpoint changes ==
+(none)
+
+== Likely config changes ==
+-    "dev": "next dev --turbopack",
++    "site:dev": "next dev --turbopack",

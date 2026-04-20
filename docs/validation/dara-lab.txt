@@ -1,0 +1,29 @@
+Repository: https://github.com/Akshaysanthosh/dara-lab
+Scenario: Moved Google Analytics to a required NEXT_PUBLIC_GA_MEASUREMENT_ID env var without adding setup docs.
+
+Base ref: main
+Diff range: main...HEAD
+
+== Working tree status ==
+(clean)
+
+== Changed files ==
+src/components/GoogleAnalytics.tsx
+
+== Changed docs files ==
+(none)
+
+== Potential renames ==
+(none)
+
+== Likely env var changes ==
++  const measurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? "G-VLLZ5Z7B8F";
+
+== Likely CLI flag changes ==
+(none)
+
+== Likely route or endpoint changes ==
+(none)
+
+== Likely config changes ==
+(none)
