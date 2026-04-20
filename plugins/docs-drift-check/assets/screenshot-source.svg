@@ -1,0 +1,34 @@
+<svg width="1440" height="960" viewBox="0 0 1440 960" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1440" height="960" fill="#EEF2F7"/>
+  <rect x="48" y="52" width="1344" height="856" rx="34" fill="#0B1220"/>
+  <rect x="48" y="52" width="1344" height="856" rx="34" stroke="#1E293B" stroke-width="4"/>
+  <circle cx="110" cy="110" r="10" fill="#FB7185"/>
+  <circle cx="144" cy="110" r="10" fill="#FBBF24"/>
+  <circle cx="178" cy="110" r="10" fill="#34D399"/>
+  <text x="222" y="118" fill="#E2E8F0" font-family="Menlo, Monaco, Consolas, Liberation Mono, monospace" font-size="24">Docs Drift Check</text>
+  <text x="96" y="172" fill="#93C5FD" font-family="Menlo, Monaco, Consolas, Liberation Mono, monospace" font-size="20">$ bash plugins/docs-drift-check/skills/docs-drift-check/scripts/docs_drift_check.sh main</text>
+  <rect x="92" y="212" width="588" height="278" rx="24" fill="#111827"/>
+  <text x="122" y="256" fill="#E5E7EB" font-family="Menlo, Monaco, Consolas, Liberation Mono, monospace" font-size="20">Validation example: larger frontend repo</text>
+  <text x="122" y="300" fill="#94A3B8" font-family="Menlo, Monaco, Consolas, Liberation Mono, monospace" font-size="18">== Changed files ==</text>
+  <text x="122" y="334" fill="#38BDF8" font-family="Menlo, Monaco, Consolas, Liberation Mono, monospace" font-size="18">vercel.json</text>
+  <text x="122" y="384" fill="#E5E7EB" font-family="Menlo, Monaco, Consolas, Liberation Mono, monospace" font-size="18">== Likely route or endpoint changes ==</text>
+  <text x="122" y="418" fill="#86EFAC" font-family="Menlo, Monaco, Consolas, Liberation Mono, monospace" font-size="18">+      "src": "/api/waitlist",</text>
+  <text x="122" y="452" fill="#86EFAC" font-family="Menlo, Monaco, Consolas, Liberation Mono, monospace" font-size="18">+      "dest": "https://waitlist.relam.ai/api/waitlist"</text>
+  <rect x="760" y="212" width="586" height="278" rx="24" fill="#111827"/>
+  <text x="790" y="256" fill="#E5E7EB" font-family="Menlo, Monaco, Consolas, Liberation Mono, monospace" font-size="20">Validation example: larger research repo</text>
+  <text x="790" y="300" fill="#94A3B8" font-family="Menlo, Monaco, Consolas, Liberation Mono, monospace" font-size="18">== Changed files ==</text>
+  <text x="790" y="334" fill="#38BDF8" font-family="Menlo, Monaco, Consolas, Liberation Mono, monospace" font-size="18">src/data.py</text>
+  <text x="790" y="384" fill="#E5E7EB" font-family="Menlo, Monaco, Consolas, Liberation Mono, monospace" font-size="18">== Likely env var changes ==</text>
+  <text x="790" y="418" fill="#86EFAC" font-family="Menlo, Monaco, Consolas, Liberation Mono, monospace" font-size="18">+    data_dir = Path(os.getenv("GCN_CORA_DATA_DIR", data_dir))</text>
+  <rect x="92" y="542" width="1254" height="304" rx="28" fill="#F8FAFC"/>
+  <rect x="92" y="542" width="1254" height="304" rx="28" stroke="#D9E2F1" stroke-width="4"/>
+  <text x="132" y="610" fill="#0F172A" font-family="Inter, Helvetica, Arial, sans-serif" font-size="52" font-weight="700">Catch likely documentation drift before it ships</text>
+  <text x="132" y="668" fill="#334155" font-family="Inter, Helvetica, Arial, sans-serif" font-size="28">Flags high-signal changes like renamed dev commands, new API endpoints, setup env vars,</text>
+  <text x="132" y="708" fill="#334155" font-family="Inter, Helvetica, Arial, sans-serif" font-size="28">deployment routing changes, and renamed paths that can quietly stale your README or docs.</text>
+  <rect x="132" y="744" width="274" height="54" rx="27" fill="#DBEAFE"/>
+  <text x="166" y="779" fill="#1D4ED8" font-family="Inter, Helvetica, Arial, sans-serif" font-size="26" font-weight="700">Repo-local skill</text>
+  <rect x="430" y="744" width="256" height="54" rx="27" fill="#E0F2FE"/>
+  <text x="464" y="779" fill="#0369A1" font-family="Inter, Helvetica, Arial, sans-serif" font-size="26" font-weight="700">Local plugin</text>
+  <rect x="712" y="744" width="334" height="54" rx="27" fill="#DCFCE7"/>
+  <text x="746" y="779" fill="#15803D" font-family="Inter, Helvetica, Arial, sans-serif" font-size="26" font-weight="700">Public validation</text>
+</svg>

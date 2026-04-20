@@ -1,9 +1,10 @@
 {
   "name": "docs-drift-check",
   "version": "0.1.0",
-  "description": "Spot likely documentation drift in a branch, pull request, or local diff.",
+  "description": "Catch likely documentation drift before it ships.",
   "author": {
     "name": "Akshay",
+    "email": "sakshay797@gmail.com",
     "url": "https://github.com/Akshaysanthosh"
   },
   "homepage": "https://github.com/Akshaysanthosh/docs-drift-check",
@@ -19,8 +20,8 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "Docs Drift Check",
-    "shortDescription": "Flag likely documentation drift.",
-    "longDescription": "Scans code changes for doc-sensitive signals like env vars, CLI flags, routes, config keys, and renames, then points to likely stale docs files.",
+    "shortDescription": "Catch likely docs drift fast.",
+    "longDescription": "Reviews code changes for doc-sensitive signals like env vars, commands, routes, config keys, and renames, then points to likely stale README, setup, and API docs.",
     "developerName": "Akshay",
     "category": "Developer Tools",
     "capabilities": [
@@ -28,11 +29,18 @@
       "Read"
     ],
     "websiteURL": "https://github.com/Akshaysanthosh/docs-drift-check",
+    "privacyPolicyURL": "https://github.com/Akshaysanthosh/docs-drift-check/blob/main/docs/privacy-policy.md",
+    "termsOfServiceURL": "https://github.com/Akshaysanthosh/docs-drift-check/blob/main/docs/terms-of-service.md",
     "defaultPrompt": [
       "Check whether this branch likely needs documentation updates.",
       "Review this PR for README, docs, and setup drift.",
       "Find stale docs caused by recent API or config changes."
     ],
-    "brandColor": "#1D4ED8"
+    "brandColor": "#1D4ED8",
+    "composerIcon": "./assets/icon.svg",
+    "logo": "./assets/logo.svg",
+    "screenshots": [
+      "./assets/screenshot.png"
+    ]
   }
 }

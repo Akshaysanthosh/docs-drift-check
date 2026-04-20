@@ -1,0 +1,14 @@
+<svg width="1280" height="320" viewBox="0 0 1280 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="320" rx="40" fill="#F8FAFC"/>
+  <rect x="32" y="32" width="1216" height="256" rx="32" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="4"/>
+  <rect x="76" y="66" width="188" height="188" rx="46" fill="#0B1220"/>
+  <rect x="108" y="98" width="94" height="136" rx="18" fill="#F8FAFC"/>
+  <path d="M128 136H184" stroke="#1D4ED8" stroke-width="12" stroke-linecap="round"/>
+  <path d="M128 164H174" stroke="#94A3B8" stroke-width="10" stroke-linecap="round"/>
+  <path d="M128 192H162" stroke="#94A3B8" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="212" cy="188" r="34" fill="#2563EB"/>
+  <path d="M196 188L208 200L228 176" stroke="#EFF6FF" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="308" y="142" fill="#0F172A" font-family="Inter, Helvetica, Arial, sans-serif" font-size="64" font-weight="700">Docs Drift Check</text>
+  <text x="308" y="198" fill="#334155" font-family="Inter, Helvetica, Arial, sans-serif" font-size="28">Catch likely documentation drift before it ships.</text>
+  <text x="308" y="234" fill="#64748B" font-family="Inter, Helvetica, Arial, sans-serif" font-size="24">Codex skill and plugin for README, setup, API, env var, and config drift.</text>
+</svg>

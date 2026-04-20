@@ -2,6 +2,8 @@
 
 `docs-drift-check` is a Codex skill and local Codex plugin for spotting likely documentation drift in a branch, PR, or local diff.
 
+Tagline: `Catch likely documentation drift before it ships.`
+
 Public repository: [github.com/Akshaysanthosh/docs-drift-check](https://github.com/Akshaysanthosh/docs-drift-check)
 
 ![Docs Drift Check terminal demo](assets/docs-drift-demo.svg)
@@ -33,10 +35,17 @@ It focuses on high-signal, user-facing changes such as:
   scripts/docs_drift_check.sh
 assets/docs-drift-demo.svg
 docs/go-to-market.md
+docs/install-in-codex.md
+docs/privacy-policy.md
+docs/terms-of-service.md
+docs/support.md
+docs/compatibility.md
+docs/what-counts-as-drift.md
 docs/validation-report.md
 docs/validation/
 plugins/docs-drift-check/
   .codex-plugin/plugin.json
+  assets/
   skills/docs-drift-check/
 scripts/install_local_skill.sh
 scripts/install_local_plugin.sh
@@ -79,6 +88,8 @@ bash scripts/install_local_plugin.sh /path/to/target-repo
 
 This copies the plugin into `plugins/docs-drift-check/` and creates or updates `.agents/plugins/marketplace.json`.
 
+Detailed Codex install notes live at [docs/install-in-codex.md](docs/install-in-codex.md).
+
 ## Install behavior
 
 - The installer copies `.agents/skills/docs-drift-check/` into the target repository.
@@ -112,6 +123,17 @@ The validation examples use small, intentional branch changes on real public rep
 
 This project is available under the MIT license. See [LICENSE](LICENSE).
 
+## Policies and support
+
+- Privacy policy: [docs/privacy-policy.md](docs/privacy-policy.md)
+- Terms of service: [docs/terms-of-service.md](docs/terms-of-service.md)
+- Support: [docs/support.md](docs/support.md)
+- Compatibility: [docs/compatibility.md](docs/compatibility.md)
+- Drift definition and false-positive notes: [docs/what-counts-as-drift.md](docs/what-counts-as-drift.md)
+- PR review example: [docs/pr-review-example.md](docs/pr-review-example.md)
+- Security reporting: [SECURITY.md](SECURITY.md)
+- Changelog: [CHANGELOG.md](CHANGELOG.md)
+
 ## Commercialization
 
 A lightweight go-to-market plan lives at [docs/go-to-market.md](docs/go-to-market.md).
@@ -126,4 +148,4 @@ Good follow-ups from here:
 
 - improve the heuristics on real PRs
 - add language-specific route or config patterns if you see repeatable gaps
-- add plugin icons, screenshots, and fuller marketplace metadata
+- collect pilot testimonials or “caught before merge” examples

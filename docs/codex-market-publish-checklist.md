@@ -18,6 +18,13 @@ Official references:
 - Local plugin install path works
 - Versioned plugin is already at `0.1.0`
 - Public validation examples and smoke tests exist
+- Plugin icon, logo, and screenshot assets now exist
+- Privacy policy and terms pages now exist
+- Support, security, compatibility, and install docs now exist
+- Changelog exists
+- Issue templates exist
+- A PR review workflow example exists
+- The plugin tagline and marketplace copy are now tightened
 
 ## What is blocked by platform status
 
@@ -31,40 +38,24 @@ These are the items worth finishing so the plugin is “curation-ready” once a
 
 ### Product polish
 
-- Add a small plugin icon and logo under `plugins/docs-drift-check/assets/`
-- Add at least 1 screenshot of the plugin in use
-- Tighten the short and long descriptions for marketplace browsing
-- Decide the canonical plugin tagline and positioning
+- Add additional screenshots if the plugin grows beyond a single-terminal workflow
 
 ### Manifest completeness
 
-- Add `author.email` in `plugin.json`
-- Add explicit `homepage` and keep it stable
 - Keep `repository` pointed at the public GitHub repo
-- Add `privacyPolicyURL`
-- Add `termsOfServiceURL`
-- Add `composerIcon`, `logo`, and `screenshots` paths after assets exist
 - Revisit `capabilities` once the plugin grows beyond read-only drift detection
 
 ### Documentation quality
 
-- Add a dedicated install section specifically for Codex users
-- Add a “what counts as docs drift” section with false-positive caveats
-- Add one example showing how to use the plugin in a real PR review workflow
-- Add release notes or a changelog entry for each tagged version
+- Keep adding release notes or a changelog entry for each tagged version
 
 ### Operational readiness
 
-- Decide how you want to handle support or bug reports
-- Decide whether you want an issue template and a security contact path
-- Add a simple compatibility statement for the Codex app, CLI, and IDE flows you support
 - Decide whether future versions will include connectors, MCP, or stay skill-only
 
 ### Legal and trust
 
 - Keep the MIT license, or switch if you want commercial restrictions later
-- Write a short privacy policy if you want marketplace-grade legal completeness
-- Write basic terms if you plan to sell support, hosted features, or paid add-ons
 
 ### Distribution strategy
 
@@ -74,12 +65,11 @@ These are the items worth finishing so the plugin is “curation-ready” once a
 
 ## Recommended next publish sequence
 
-1. Finish icon, logo, and 1 screenshot.
-2. Fill the remaining manifest fields.
-3. Add a privacy policy and terms page.
-4. Keep tagging releases and collecting real validation examples.
-5. Watch the Codex plugin docs for an official submission or public publishing flow.
-6. When that exists, submit this plugin with the current repo, manifest, assets, and validation evidence ready.
+1. Keep tagging releases and collecting real validation examples.
+2. Collect pilot testimonials or concrete “caught before merge” examples.
+3. Decide the product path: local-only plugin or richer connector-backed version.
+4. Watch the Codex plugin docs for an official submission or public publishing flow.
+5. When that exists, submit this plugin with the current repo, manifest, assets, and validation evidence ready.
 
 ## Practical bottom line
 
