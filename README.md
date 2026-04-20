@@ -104,7 +104,7 @@ This repo also includes a repeatable validation pass against real public reposit
 
 - Run it with `bash scripts/run_public_validation.sh`
 - Summary report: [docs/validation-report.md](docs/validation-report.md)
-- Raw outputs: [my-portfolio](docs/validation/my-portfolio.txt), [Relam-homepage](docs/validation/Relam-homepage.txt), [dara-lab](docs/validation/dara-lab.txt)
+- Raw outputs: [my-portfolio](docs/validation/my-portfolio.txt), [Relam-homepage](docs/validation/Relam-homepage.txt), [dara-lab](docs/validation/dara-lab.txt), [gcn-repo](docs/validation/gcn-repo.txt), [relam-landing](docs/validation/relam-landing.txt)
 
 The validation examples use small, intentional branch changes on real public repos so the output stays reproducible and honest.
 
@@ -116,10 +116,14 @@ This project is available under the MIT license. See [LICENSE](LICENSE).
 
 A lightweight go-to-market plan lives at [docs/go-to-market.md](docs/go-to-market.md).
 
+## Codex marketplace status
+
+The current publish-readiness checklist for the official Codex Plugin Directory lives at [docs/codex-market-publish-checklist.md](docs/codex-market-publish-checklist.md).
+
 ## Next steps
 
 Good follow-ups from here:
 
 - improve the heuristics on real PRs
 - add language-specific route or config patterns if you see repeatable gaps
-- add screenshots and a first tagged release once the workflow stabilizes
+- add plugin icons, screenshots, and fuller marketplace metadata

@@ -22,12 +22,16 @@ bash scripts/run_public_validation.sh
 | `Akshaysanthosh/my-portfolio` | Renamed the main dev script from `npm run dev` to `npm run site:dev` | CLI/config drift | `README.md` getting started commands | [output](validation/my-portfolio.txt) |
 | `Akshaysanthosh/Relam-homepage` | Added a new public endpoint at `/api/contact` | Route drift | `README.md`, `spec.md`, API notes | [output](validation/Relam-homepage.txt) |
 | `Akshaysanthosh/dara-lab` | Moved Google Analytics to `NEXT_PUBLIC_GA_MEASUREMENT_ID` | Env var drift | `README.md`, setup or deploy docs | [output](validation/dara-lab.txt) |
+| `Akshaysanthosh/gcn-repo` | Made the Cora dataset path configurable via `GCN_CORA_DATA_DIR` | Env var/setup drift | `README.md` setup steps and first-run notes | [output](validation/gcn-repo.txt) |
+| `Akshaysanthosh/relam-landing` | Added a Vercel proxy for `/api/waitlist` | Route/config drift | deploy notes, integration notes, API docs | [output](validation/relam-landing.txt) |
 
 ## Notes
 
 - `my-portfolio` surfaced both `Likely CLI flag changes` and `Likely config changes`, which is the right outcome for a package script rename that makes README commands stale.
 - `Relam-homepage` surfaced the new `/api/contact` route directly, which is useful when public behavior changes without matching docs updates.
 - `dara-lab` surfaced the new `NEXT_PUBLIC_GA_MEASUREMENT_ID` env var, which is exactly the kind of setup drift teams often miss.
+- `gcn-repo` surfaced a new `GCN_CORA_DATA_DIR` environment variable in a larger research repo where setup instructions matter a lot.
+- `relam-landing` surfaced a new `/api/waitlist` route and its destination directly from `vercel.json`, which is valuable for deployment-oriented drift.
 
 ## Takeaway
 
@@ -36,5 +40,6 @@ The current heuristic set is already useful for three common sources of docs dri
 1. changed developer commands
 2. added API endpoints
 3. new required environment variables
+4. deployment routing changes
 
 The next step is less about new surface area and more about tuning false positives on larger repos and live pull requests.

@@ -1,0 +1,29 @@
+Repository: https://github.com/Akshaysanthosh/gcn-repo
+Scenario: Made the dataset location configurable through GCN_CORA_DATA_DIR without updating setup instructions.
+
+Base ref: main
+Diff range: main...HEAD
+
+== Working tree status ==
+(clean)
+
+== Changed files ==
+src/data.py
+
+== Changed docs files ==
+(none)
+
+== Potential renames ==
+(none)
+
+== Likely env var changes ==
++    data_dir = Path(os.getenv("GCN_CORA_DATA_DIR", data_dir))
+
+== Likely CLI flag changes ==
+(none)
+
+== Likely route or endpoint changes ==
+(none)
+
+== Likely config changes ==
+(none)

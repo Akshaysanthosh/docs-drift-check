@@ -1,0 +1,31 @@
+Repository: https://github.com/Akshaysanthosh/relam-landing
+Scenario: Added a public /api/waitlist proxy in Vercel routing without updating deployment or integration notes.
+
+Base ref: main
+Diff range: main...HEAD
+
+== Working tree status ==
+(clean)
+
+== Changed files ==
+vercel.json
+
+== Changed docs files ==
+(none)
+
+== Potential renames ==
+(none)
+
+== Likely env var changes ==
+(none)
+
+== Likely CLI flag changes ==
+(none)
+
+== Likely route or endpoint changes ==
++      "src": "/api/waitlist",
++      "dest": "https://waitlist.relam.ai/api/waitlist"
+
+== Likely config changes ==
++      "src": "/api/waitlist",
++      "dest": "https://waitlist.relam.ai/api/waitlist"

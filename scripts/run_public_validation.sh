@@ -125,6 +125,66 @@ PY
   write_output "dara-lab" "$repo_url" "Moved Google Analytics to a required NEXT_PUBLIC_GA_MEASUREMENT_ID env var without adding setup docs." "$output"
 }
 
+run_gcn_repo() {
+  local repo_dir="$WORK_ROOT/gcn-repo"
+  local repo_url="https://github.com/Akshaysanthosh/gcn-repo"
+  local base_branch
+  local output
+
+  clone_repo "$repo_url.git" "$repo_dir"
+  init_repo "$repo_dir"
+  base_branch="$(git -C "$repo_dir" symbolic-ref --short HEAD)"
+
+  git -C "$repo_dir" checkout -q -b validation/data-dir-env
+  python3 - <<'PY' "$repo_dir/src/data.py"
+from pathlib import Path
+import sys
+
+path = Path(sys.argv[1])
+text = path.read_text()
+if "import os\n" not in text:
+    text = text.replace("import pickle as pkl\n", "import os\nimport pickle as pkl\n", 1)
+old = 'def download_cora_raw(data_dir: str | Path = "data") -> Path:\n    """Download the original Planetoid-format Cora files if missing."""\n    data_path = ensure_dir(data_dir)\n'
+new = 'def download_cora_raw(data_dir: str | Path = "data") -> Path:\n    """Download the original Planetoid-format Cora files if missing."""\n    data_dir = Path(os.getenv("GCN_CORA_DATA_DIR", data_dir))\n    data_path = ensure_dir(data_dir)\n'
+if old not in text:
+    raise SystemExit("expected download_cora_raw block not found")
+path.write_text(text.replace(old, new, 1))
+PY
+  git -C "$repo_dir" add src/data.py
+  git -C "$repo_dir" commit -q -m "Make Cora data directory configurable"
+  output="$(cd "$repo_dir" && bash "$HELPER_SCRIPT" "$base_branch")"
+  write_output "gcn-repo" "$repo_url" "Made the dataset location configurable through GCN_CORA_DATA_DIR without updating setup instructions." "$output"
+}
+
+run_relam_landing() {
+  local repo_dir="$WORK_ROOT/relam-landing"
+  local repo_url="https://github.com/Akshaysanthosh/relam-landing"
+  local base_branch
+  local output
+
+  clone_repo "$repo_url.git" "$repo_dir"
+  init_repo "$repo_dir"
+  base_branch="$(git -C "$repo_dir" symbolic-ref --short HEAD)"
+
+  git -C "$repo_dir" checkout -q -b validation/waitlist-proxy
+  python3 - <<'PY' "$repo_dir/vercel.json"
+from pathlib import Path
+import sys
+
+path = Path(sys.argv[1])
+text = path.read_text()
+old = '    {\n      "handle": "filesystem"\n    },\n'
+new = '    {\n      "handle": "filesystem"\n    },\n    {\n      "src": "/api/waitlist",\n      "dest": "https://waitlist.relam.ai/api/waitlist"\n    },\n'
+if old not in text:
+    raise SystemExit("expected vercel route block not found")
+path.write_text(text.replace(old, new, 1))
+PY
+  git -C "$repo_dir" add vercel.json
+  git -C "$repo_dir" commit -q -m "Add waitlist API proxy"
+  output="$(cd "$repo_dir" && bash "$HELPER_SCRIPT" "$base_branch")"
+  write_output "relam-landing" "$repo_url" "Added a public /api/waitlist proxy in Vercel routing without updating deployment or integration notes." "$output"
+}
+
 rm -rf "$WORK_ROOT"
 mkdir -p "$WORK_ROOT" "$OUTPUT_DIR"
 
@@ -132,4 +192,6 @@ log "Running public validation examples into $WORK_ROOT"
 run_my_portfolio
 run_relam_homepage
 run_dara_lab
+run_gcn_repo
+run_relam_landing
 log "Validation outputs written to $OUTPUT_DIR"
