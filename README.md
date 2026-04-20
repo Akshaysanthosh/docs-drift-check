@@ -2,6 +2,8 @@
 
 `docs-drift-check` is a Codex skill and local Codex plugin for spotting likely documentation drift in a branch, PR, or local diff.
 
+Public repository: [github.com/Akshaysanthosh/docs-drift-check](https://github.com/Akshaysanthosh/docs-drift-check)
+
 It focuses on high-signal, user-facing changes such as:
 
 - env vars
@@ -91,11 +93,11 @@ The tests create temporary git repos, install either the skill or the plugin, ma
 
 ## License
 
-This project is available under the MIT license. See [LICENSE](/Users/akshay/Documents/Projects/plugin/LICENSE).
+This project is available under the MIT license. See [LICENSE](LICENSE).
 
 ## Commercialization
 
-A lightweight go-to-market plan lives at [docs/go-to-market.md](/Users/akshay/Documents/Projects/plugin/docs/go-to-market.md).
+A lightweight go-to-market plan lives at [docs/go-to-market.md](docs/go-to-market.md).
 
 ## Next steps
 
@@ -103,4 +105,4 @@ Good follow-ups from here:
 
 - improve the heuristics on real PRs
 - add language-specific route or config patterns if you see repeatable gaps
-- add real screenshots and a public repository URL once you publish it
+- add screenshots and a first tagged release once the workflow stabilizes

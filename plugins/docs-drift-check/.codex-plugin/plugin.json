@@ -3,8 +3,11 @@
   "version": "0.1.0",
   "description": "Spot likely documentation drift in a branch, pull request, or local diff.",
   "author": {
-    "name": "Akshay"
+    "name": "Akshay",
+    "url": "https://github.com/Akshaysanthosh"
   },
+  "homepage": "https://github.com/Akshaysanthosh/docs-drift-check",
+  "repository": "https://github.com/Akshaysanthosh/docs-drift-check",
   "license": "MIT",
   "keywords": [
     "codex",
@@ -24,6 +27,7 @@
       "Interactive",
       "Read"
     ],
+    "websiteURL": "https://github.com/Akshaysanthosh/docs-drift-check",
     "defaultPrompt": [
       "Check whether this branch likely needs documentation updates.",
       "Review this PR for README, docs, and setup drift.",
