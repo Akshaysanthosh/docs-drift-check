@@ -1,0 +1,20 @@
+{
+  "name": "docs-drift-check-local",
+  "interface": {
+    "displayName": "Docs Drift Check"
+  },
+  "plugins": [
+    {
+      "name": "docs-drift-check",
+      "source": {
+        "source": "local",
+        "path": "./plugins/docs-drift-check"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    }
+  ]
+}

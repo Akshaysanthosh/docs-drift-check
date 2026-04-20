@@ -1,0 +1,34 @@
+{
+  "name": "docs-drift-check",
+  "version": "0.1.0",
+  "description": "Spot likely documentation drift in a branch, pull request, or local diff.",
+  "author": {
+    "name": "Akshay"
+  },
+  "license": "MIT",
+  "keywords": [
+    "codex",
+    "documentation",
+    "git",
+    "pull-request",
+    "review"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Docs Drift Check",
+    "shortDescription": "Flag likely documentation drift.",
+    "longDescription": "Scans code changes for doc-sensitive signals like env vars, CLI flags, routes, config keys, and renames, then points to likely stale docs files.",
+    "developerName": "Akshay",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Interactive",
+      "Read"
+    ],
+    "defaultPrompt": [
+      "Check whether this branch likely needs documentation updates.",
+      "Review this PR for README, docs, and setup drift.",
+      "Find stale docs caused by recent API or config changes."
+    ],
+    "brandColor": "#1D4ED8"
+  }
+}

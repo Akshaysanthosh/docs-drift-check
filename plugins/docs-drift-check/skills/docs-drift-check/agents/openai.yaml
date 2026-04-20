@@ -1,0 +1,6 @@
+interface:
+  display_name: "Docs Drift Check"
+  short_description: "Flag likely documentation drift."
+  default_prompt: "Use $docs-drift-check to assess whether this branch likely needs documentation updates."
+policy:
+  allow_implicit_invocation: true
