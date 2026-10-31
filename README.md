@@ -1,6 +1,6 @@
 # Docs Drift Check
 
-`docs-drift-check` is a Codex skill and local Codex plugin for spotting likely documentation drift in a branch, PR, or local diff.
+`docs-drift-check` is a Codex skill and local Codex plugin for spotting likely documentation drift in committed branch or PR changes.
 
 Tagline: `Catch likely documentation drift before it ships.`
 
@@ -16,6 +16,12 @@ It focuses on high-signal, user-facing changes such as:
 - config keys
 - renamed files or modules
 - setup and onboarding steps
+
+## Evidence and limitations
+
+The scanner uses deterministic patterns over `git diff BASE...HEAD` to identify changes that may need documentation. Uncommitted working-tree edits are excluded. A match is a review prompt, not proof that documentation is stale; the tool does not semantically verify code against documentation.
+
+The [validation report](docs/validation-report.md) covers intentional changes introduced into five public repositories. These are synthetic scenarios, not five independently discovered production defects or a precision/recall benchmark. Both installation paths have automated smoke tests.
 
 ## What this repo contains
 
